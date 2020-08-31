@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{42BB8FD1-4E28-4A14-B47A-65A10CED5BF8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\code\headers;..\..\library\SDL2-2.0.10\include;..\..\library\opengl-toolkit\headers;..\..\library\SDL2_mixer-2.0.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SupportJustMyCode />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\library\SDL2_mixer-2.0.4\lib\x64;..\..\library\opengl-toolkit\lib\x64;..\..\library\SDL2-2.0.10\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl-toolkit-debug.lib;opengl-toolkit-release.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_mixer.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\code\headers;..\..\library\SDL2-2.0.10\include;..\..\library\opengl-toolkit\headers;..\..\library\SDL2_mixer-2.0.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SupportJustMyCode />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\library\SDL2_mixer-2.0.4\lib\x64;..\..\library\opengl-toolkit\lib\x64;..\..\library\SDL2-2.0.10\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl-toolkit-debug.lib;opengl-toolkit-release.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_mixer.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\code\Camera_Component.cpp" />
+    <ClCompile Include="..\..\code\Collision_Task.cpp" />
+    <ClCompile Include="..\..\code\Component.cpp" />
+    <ClCompile Include="..\..\code\Control_Component.cpp" />
+    <ClCompile Include="..\..\code\Control_Task.cpp" />
+    <ClCompile Include="..\..\code\Dispacher.cpp" />
+    <ClCompile Include="..\..\code\Entity.cpp" />
+    <ClCompile Include="..\..\code\IA_Component.cpp" />
+    <ClCompile Include="..\..\code\IA_Controller_Task.cpp" />
+    <ClCompile Include="..\..\code\Initialize.cpp" />
+    <ClCompile Include="..\..\code\Input.cpp" />
+    <ClCompile Include="..\..\code\Input_Component.cpp" />
+    <ClCompile Include="..\..\code\Input_Task.cpp" />
+    <ClCompile Include="..\..\code\Kernel.cpp" />
+    <ClCompile Include="..\..\code\Light_Component.cpp" />
+    <ClCompile Include="..\..\code\Message.cpp" />
+    <ClCompile Include="..\..\code\Model_Component.cpp" />
+    <ClCompile Include="..\..\code\Paint_Task.cpp" />
+    <ClCompile Include="..\..\code\Print_Message_Task.cpp" />
+    <ClCompile Include="..\..\code\Scene.cpp" />
+    <ClCompile Include="..\..\code\Sphere_Collider_Component.cpp" />
+    <ClCompile Include="..\..\code\Task.cpp" />
+    <ClCompile Include="..\..\code\Transform_Component.cpp" />
+    <ClCompile Include="..\..\code\Update_Positions_Task.cpp" />
+    <ClCompile Include="..\..\code\Window.cpp" />
+    <ClCompile Include="AudioController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\headers\AudioController.hpp" />
+    <ClInclude Include="..\..\code\headers\Camera_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Collision_Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Control_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Control_Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Dispacher.hpp" />
+    <ClInclude Include="..\..\code\headers\EngineTypeDef.hpp" />
+    <ClInclude Include="..\..\code\headers\Entities_In_Game_Update.hpp" />
+    <ClInclude Include="..\..\code\headers\Entity.hpp" />
+    <ClInclude Include="..\..\code\headers\IA_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\IA_Controller_Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Initialize.hpp" />
+    <ClInclude Include="..\..\code\headers\Input.hpp" />
+    <ClInclude Include="..\..\code\headers\Input_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Input_Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Kernel.hpp" />
+    <ClInclude Include="..\..\code\headers\Light_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\MEngine.h" />
+    <ClInclude Include="..\..\code\headers\Message.hpp" />
+    <ClInclude Include="..\..\code\headers\Model_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Observer.hpp" />
+    <ClInclude Include="..\..\code\headers\Paint_Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Porcentaje.hpp" />
+    <ClInclude Include="..\..\code\headers\Print_Message_Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Scene.hpp" />
+    <ClInclude Include="..\..\code\headers\Sound_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Sphere_Collider_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Transform_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\types.hpp" />
+    <ClInclude Include="..\..\code\headers\Update_Positions_Task.hpp" />
+    <ClInclude Include="..\..\code\headers\Variant.hpp" />
+    <ClInclude Include="..\..\code\headers\Window.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Components">
+      <UniqueIdentifier>{86357b37-b521-4af5-9442-a9f810e76dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Componnets">
+      <UniqueIdentifier>{d358ffba-13dc-42da-aa77-45199180c902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Tasks">
+      <UniqueIdentifier>{4b1b3b91-f2da-4878-9945-18e1163df765}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Tasks">
+      <UniqueIdentifier>{e1863d33-bd85-461f-b5a0-476b3860ed86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Message">
+      <UniqueIdentifier>{6c8d2f6d-19b8-4238-acb3-4582132f15a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Message">
+      <UniqueIdentifier>{1ae350de-b0ad-42d5-a89c-2a5eaad4cf1c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioController.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Transform_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Window.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Kernel.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Scene.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Paint_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Initialize.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Update_Positions_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Input.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Entity.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Model_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Print_Message_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Camera_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Input_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Light_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Message.cpp">
+      <Filter>Archivos de recursos\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Dispacher.cpp">
+      <Filter>Archivos de recursos\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Input_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Control_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Control_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\IA_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\IA_Controller_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Sphere_Collider_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Collision_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\headers\AudioController.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Porcentaje.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Window.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\EngineTypeDef.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Variant.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\MEngine.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Kernel.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\types.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Entity.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Transform_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Light_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Sound_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Model_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Paint_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Scene.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Print_Message_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Camera_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Initialize.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Update_Positions_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Input.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Input_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Entities_In_Game_Update.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Dispacher.hpp">
+      <Filter>Archivos de encabezado\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Observer.hpp">
+      <Filter>Archivos de encabezado\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Message.hpp">
+      <Filter>Archivos de encabezado\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Input_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Control_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Control_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\IA_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\IA_Controller_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Sphere_Collider_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Collision_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

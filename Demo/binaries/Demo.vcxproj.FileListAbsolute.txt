@@ -1,0 +1,2 @@
+C:\Engine\Demo\proyectos\vs-2019\x64\Debug\Demo.exe
+C:\Engine\Demo\proyectos\vs-2019\x64\Debug\Demo.pdb
