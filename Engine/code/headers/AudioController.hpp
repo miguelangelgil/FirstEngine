@@ -76,6 +76,9 @@ namespace engine
         Modifica el volumen de un canal en concreto
         */
         void channel_volume(int channel, int volume);
+        /**
+        * Ajusta el volumen del audio
+        */
         void music_volume(int volume);
         /**
         Pausa un canal

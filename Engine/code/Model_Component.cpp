@@ -6,6 +6,7 @@ namespace engine
 {
     engine::Model_Component::Model_Component(Entity* parent, const string path) : Component(parent), model(new glt::Model_Obj(path))
     {
+        
         initialize();
     }
 

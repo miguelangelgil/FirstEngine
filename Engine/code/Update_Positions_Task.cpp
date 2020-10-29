@@ -42,11 +42,12 @@ namespace engine
             iterator_components = entities[i]->get_components()->begin();
             for (; iterator_components != entities[i]->get_components()->end(); iterator_components++)
             {
-                if (iterator_components->second->get_node_component() != nullptr) 
-                {
-                    iterator_components->second->get_node_component()->set_transformation(transform->get_transformation());
+                if(iterator_components->second != nullptr)
+                    if (iterator_components->second->get_node_component() != nullptr) 
+                    {
+                        iterator_components->second->get_node_component()->set_transformation(transform->get_transformation());
                     
-                }
+                    }
                
             }
         }

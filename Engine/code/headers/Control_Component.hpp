@@ -53,6 +53,31 @@ namespace engine
         virtual bool initialize() override;
 
         /// <summary>
+        /// Setea teclas de control de dirección
+        /// Por defecto estos valores se asignan a WASD
+        /// </summary>
+        /// <param name="Up">tecla para ir hacia arriba</param>
+        /// <param name="Down">tecla para ir hacia abajo</param>
+        /// <param name="Left">tecla para ir hacia la izquierda</param>
+        /// <param name="Right">tecla para ir hacia la derecha</param>
+        void set_movements_controls(string Up, string Down, string Left, string Right);
+
+        /// <summary>
+        /// Setea la velocidad de movimiento
+        /// </summary>
+        /// <param name="speed">velocidad</param>
+        void set_speed(float speed);
+
+        /// <summary>
+        /// Setea la tecla de salto
+        /// por defecto no se asigna
+        /// tambien setea la fuerza del salto
+        /// </summary>
+        /// <param name="Jump">tecla de salto</param>
+        /// <param name="height">fuerza de salto</param>
+        void set_jump(string Jump, float height);
+
+        /// <summary>
         /// Parsea parametros a las variables indicadas
         /// </summary>
         /// <param name="name">parametro</param>

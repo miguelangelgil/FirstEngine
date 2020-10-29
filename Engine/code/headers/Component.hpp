@@ -36,6 +36,11 @@ namespace engine
     class Entity;
     class Component
     {
+    private:
+        /// <summary>
+        /// Indica si el componente está activo
+        /// </summary>
+        bool state;
     protected:
         /// <summary>
         /// puntero al padre que lo contiene
@@ -109,6 +114,16 @@ namespace engine
         {
             return parent;
         }
+        /// <summary>
+        /// Setea el estado del componente
+        /// </summary>
+        /// <param name="state"></param>
+        inline void set_state_component(bool state) { this->state = state; }
+        /// <summary>
+        /// Retornba el estado del componente
+        /// </summary>
+        /// <returns></returns>
+        inline bool get_state_component()const {return state; }
 
     };
 

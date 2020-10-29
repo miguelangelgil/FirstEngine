@@ -43,6 +43,10 @@ namespace engine
         /// Puntero a la entidad del player, se usa esta referencia para realizar una tarea al chocar con el
         /// </summary>
         Entity* player;
+        /// <summary>
+        /// Determina si el jugador se encuentra dentro de una colision
+        /// </summary>
+        bool player_in_collision;
     public:
         /// <summary>
         /// Constructor de tarea

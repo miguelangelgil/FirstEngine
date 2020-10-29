@@ -25,11 +25,27 @@ SOFTWARE.
 #pragma once
 #include <Component.hpp>
 
+
+
 namespace engine 
 {
+
+    enum COLLISION_STATE{
+        OUT_COLLISION = 0,
+        ON_COLLISION_ENTER = 1,
+        ON_COLLISION = 2,
+        ON_COLLISION_EXIT = 3
+    };
+
+
     class Entity;
     class Sphere_Collider_Component : public Component 
     {
+    private:
+        /// <summary>
+        /// Estado de colision
+        /// </summary>
+        COLLISION_STATE collision_state;
     public:
         /// <summary>
         /// Radio de la sphera que compone el collider
@@ -87,6 +103,16 @@ namespace engine
         /// </summary>
         /// <returns>shared_ptr a camera</returns>
         virtual std::shared_ptr<glt::Camera> get_camera() override;
+        /// <summary>
+        /// Setea el estado de la colision
+        /// </summary>
+        /// <param name="state">estado</param>
+        inline void set_state_collision(COLLISION_STATE state) { collision_state = state; }
+        /// <summary>
+        /// devuelve el estado de la colision
+        /// </summary>
+        /// <returns>estado</returns>
+        inline COLLISION_STATE get_state_collision() const { return collision_state; }
 
         string get_type_collider();
     };

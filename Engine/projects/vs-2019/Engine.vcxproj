@@ -112,6 +112,8 @@
     <ClCompile Include="..\..\code\Paint_Task.cpp" />
     <ClCompile Include="..\..\code\Print_Message_Task.cpp" />
     <ClCompile Include="..\..\code\Scene.cpp" />
+    <ClCompile Include="..\..\code\Script_Component.cpp" />
+    <ClCompile Include="..\..\code\Script_Task.cpp" />
     <ClCompile Include="..\..\code\Sphere_Collider_Component.cpp" />
     <ClCompile Include="..\..\code\Task.cpp" />
     <ClCompile Include="..\..\code\Transform_Component.cpp" />
@@ -146,6 +148,8 @@
     <ClInclude Include="..\..\code\headers\Porcentaje.hpp" />
     <ClInclude Include="..\..\code\headers\Print_Message_Task.hpp" />
     <ClInclude Include="..\..\code\headers\Scene.hpp" />
+    <ClInclude Include="..\..\code\headers\Script_Component.hpp" />
+    <ClInclude Include="..\..\code\headers\Script_Task.hpp" />
     <ClInclude Include="..\..\code\headers\Sound_Component.hpp" />
     <ClInclude Include="..\..\code\headers\Sphere_Collider_Component.hpp" />
     <ClInclude Include="..\..\code\headers\Task.hpp" />

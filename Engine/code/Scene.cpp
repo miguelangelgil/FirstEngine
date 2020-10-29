@@ -18,7 +18,8 @@ namespace engine
         input_task(this,2), 
         control_task(this,2),
         ia_task(this,2),
-        collision_task(this,2)
+        collision_task(this,2),
+        script_task(this, 3)
     {
         count = 0;
         init_kernel(window);    
@@ -33,7 +34,8 @@ namespace engine
         input_task(this, 2),
         control_task(this, 2),
         ia_task(this, 2),
-        collision_task(this, 2)
+        collision_task(this, 2),
+        script_task(this, 3)
     {
         //load(scene_description_file_path);
         count = 0;
@@ -50,6 +52,7 @@ namespace engine
         kernel.add_task(control_task);
         kernel.add_task(ia_task);
         kernel.add_task(collision_task);
+        kernel.add_task(script_task);
 
        
     }

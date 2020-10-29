@@ -39,6 +39,7 @@ SOFTWARE.
 #include <Collision_Task.hpp>
 #include <Control_Task.hpp>
 #include <IA_Controller_Task.hpp>
+#include <Script_Task.hpp>
 
 //#include <Entities_In_Game_Update.hpp>
 using namespace std;
@@ -75,6 +76,11 @@ namespace engine
         /// Traea de deteccion de colisiones
         /// </summary>
         Collision_Task collision_task;
+        /// <summary>
+        /// Tarea de ejecución de scripts
+        /// </summary>
+        Script_Task script_task;
+
 
         /// <summary>
         /// kernel 

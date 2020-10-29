@@ -40,6 +40,10 @@ namespace engine
         {
             return transform;
         }
+        if (!components[name_component]) 
+        {
+            return nullptr;
+        }
        
         return components[name_component];
     }

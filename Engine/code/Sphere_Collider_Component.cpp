@@ -8,6 +8,7 @@ namespace engine
 
     bool engine::Sphere_Collider_Component::initialize()
     {
+        collision_state = COLLISION_STATE::OUT_COLLISION;
         return true;
     }
 

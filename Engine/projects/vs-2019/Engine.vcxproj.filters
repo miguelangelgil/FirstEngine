@@ -111,6 +111,12 @@
     <ClCompile Include="..\..\code\Collision_Task.cpp">
       <Filter>Archivos de recursos\Tasks</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\code\Script_Task.cpp">
+      <Filter>Archivos de recursos\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Script_Component.cpp">
+      <Filter>Archivos de recursos\Componnets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\AudioController.hpp">
@@ -213,6 +219,12 @@
       <Filter>Archivos de encabezado\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\headers\Collision_Task.hpp">
+      <Filter>Archivos de encabezado\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Script_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Script_Task.hpp">
       <Filter>Archivos de encabezado\Tasks</Filter>
     </ClInclude>
   </ItemGroup>

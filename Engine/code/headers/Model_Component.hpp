@@ -50,6 +50,7 @@ namespace engine
         /// </summary>
         shared_ptr< glt::Model  > model1;
 
+
     public:
         /// <summary>
         /// Constructor del componente 

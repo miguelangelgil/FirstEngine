@@ -41,4 +41,6 @@ SOFTWARE.
 #include <IA_Component.hpp>
 #include <Sphere_Collider_Component.hpp>
 #include <Sound_Component.hpp>
+#include <Script_Component.hpp>
 #undef main
+typedef shared_ptr <Component> component;

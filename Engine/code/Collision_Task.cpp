@@ -4,6 +4,7 @@
 #include <Sphere_Collider_Component.hpp>
 #include <Transform_Component.hpp>
 #include <Sound_Component.hpp>
+#include <Script_Component.hpp>
 #include <math.h>
 
 namespace engine 
@@ -27,29 +28,67 @@ namespace engine
 
     bool engine::Collision_Task::step(double time)
     {
+        bool collision;
         for (size_t i=0;i < entities_sphere_collision.size();i++) 
         {
-            for (size_t other = 0; other < entities_sphere_collision.size(); other++) 
+            Sphere_Collider_Component* collision_component = dynamic_cast<Sphere_Collider_Component*>(entities_sphere_collision[i]->get_component("collider").get());
+            collision = false;
+            size_t other;
+            for (other = 0; other < entities_sphere_collision.size(); other++) 
             {
                 if (i != other) 
                 {
                     glm::vec3 current_position = *dynamic_cast<Transform_Component*>(entities_sphere_collision[i]->get_component("transform").get())->get_position();
                     glm::vec3 other_position = *dynamic_cast<Transform_Component*>(entities_sphere_collision[other]->get_component("transform").get())->get_position();
-                    //float current_radius = dynamic_cast<Sphere_Collider_Component*>(entities_sphere_collision[i]->get_component("collision").get())->radius;
-                    //float other_radius = dynamic_cast<Sphere_Collider_Component*>(entities_sphere_collision[other]->get_component("collision").get())->radius;
                     float distance = sqrt(pow((other_position.x - current_position.x), 2) + pow((other_position.y - current_position.y), 2) + pow((other_position.z - current_position.z), 2));
-                    if (distance < 2.f/*current_radius + other_radius*/) 
+                    if (distance < collision_component->radius + dynamic_cast<Sphere_Collider_Component*>(entities_sphere_collision[i]->get_component("collider").get())->radius)
                     {
-                        if (entities_sphere_collision[i] == player || entities_sphere_collision[other] == player)
-                        {
-                           dynamic_cast<Sound_Component*> (player->get_component("choque_sound").get())->play(100,1);
-                        }
-                      
+                        collision = true;
+                        break;
                     }
                 }
             }
+            if (collision)
+            {
+                switch (collision_component->get_state_collision())
+                {
+                case COLLISION_STATE::OUT_COLLISION:
+                    collision_component->set_state_collision(COLLISION_STATE::ON_COLLISION_ENTER);
+               
+                    break;
+                case COLLISION_STATE::ON_COLLISION_ENTER:
+                    collision_component->set_state_collision(COLLISION_STATE::ON_COLLISION);
+            
+                    break;
+                case COLLISION_STATE::ON_COLLISION_EXIT:
+                    collision_component->set_state_collision(COLLISION_STATE::ON_COLLISION_ENTER);
+            
+                    break;
+                }
+            }
+            else 
+            {
+                switch (collision_component->get_state_collision())
+                {
+               
+                case COLLISION_STATE::ON_COLLISION_ENTER:
+                    collision_component->set_state_collision(COLLISION_STATE::ON_COLLISION_EXIT);
+                    break;
+                case COLLISION_STATE::ON_COLLISION:
+                    collision_component->set_state_collision(COLLISION_STATE::ON_COLLISION_EXIT);
+                    break;
+                case COLLISION_STATE::ON_COLLISION_EXIT:
+                    collision_component->set_state_collision(COLLISION_STATE::OUT_COLLISION);
+                    break;
+                }
+
+            }
+            if(other < entities_sphere_collision.size())
+                if (dynamic_cast<Script_Component*>(entities_sphere_collision[i]->get_component("script").get()))
+                    dynamic_cast<Script_Component*>(entities_sphere_collision[i]->get_component("script").get())->OnCollision(entities_sphere_collision[other], collision_component->get_state_collision());
         }
-        return false;
+
+        return true;
     }
 
     void engine::Collision_Task::scan_components()

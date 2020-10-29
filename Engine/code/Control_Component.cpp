@@ -15,6 +15,25 @@ bool engine::Control_Component::initialize()
     return true;
 }
 
+void engine::Control_Component::set_movements_controls(string Up, string Down, string Left, string Right)
+{
+    this->Up = Up;
+    this->Down = Down;
+    this->Left = Left;
+    this->Right = Right;
+}
+
+void engine::Control_Component::set_speed(float speed)
+{
+    this->speed = speed;
+}
+
+void engine::Control_Component::set_jump(string Jump, float height)
+{
+    this->Jump = Jump;
+    JumpForce = height;
+}
+
 bool engine::Control_Component::parse_property(const string& name, const string& value)
 {
     if (name == "Up")
